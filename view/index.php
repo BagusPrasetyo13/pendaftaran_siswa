@@ -17,7 +17,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h1>Halaman Home</h1>
+          <?php include('home.php') ?>
         </div>
       </div>
     </div>
@@ -26,6 +26,7 @@
   <?php include('partials/footer.php'); ?>
 
 
+  <!-- <script src="../public/js/javascript.js"></script> -->
 </body>
 
 </html>

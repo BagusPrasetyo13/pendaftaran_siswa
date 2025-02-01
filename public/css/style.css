@@ -9,52 +9,143 @@
 
 body {
   height: 2000px;
-}
-
-.wrapper-body {
-  padding: 60px;
+  background-color: #f4ffc3;
 }
 
 .navbar {
-  overflow: hidden;
-  position: relative;
-}
-
-.navbar .navbar-logo {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500 !important;
-  font-size: 24px;
-}
-
-.navbar .container {
+  background-color: #a9c46c;
+  position: fixed; /* JIKA MENGGUNAKAN FIXED MAKA MARGIN TIDAK BERFUNGSI */
+  top: 20px; /* Jarak dari atas */
+  left: 24px; /* Jarak dari kiri */
+  right: 24px; /* Jarak dari kanan */
+  border-radius: 27px; /* Sudut membulat */
+  padding: 15px 30px;
   display: flex;
-  background-color: green;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 50px 10px 50px;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Efek bayangan agar terlihat melayang */
+  z-index: 9999;
+  color: whitesmoke;
 }
 
+/* Navbar Container */
+.navbar .container {
+  width: 100%; /* Agar container tidak mengganggu */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navbar Items */
 .navbar .navbar-items {
   display: flex;
   list-style: none;
 }
 
-.navbar .navbar-items li {
-  margin-right: 20px;
+.navbar .navbar-items li a {
+  text-decoration: none;
+  margin: 0 30px;
+  color: whitesmoke;
+  letter-spacing: 2px;
 }
 
-.navbar .navbar-items a {
+.navbar .login a {
   text-decoration: none;
+  letter-spacing: 2px;
+  color: whitesmoke;
+}
+
+/* Navbar Logo */
+.navbar .navbar-logo {
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.wrapper-body {
+  padding: 110px 50px;
+  background-color: antiquewhite;
+  height: 100%;
+}
+
+.hero {
+  width: 100%; /* Pastikan container memenuhi lebar layar */
+  height: 70vh; /* Tinggi sesuai dengan tinggi layar */
+  border-radius: 30px;
+  overflow: hidden; /* Untuk menjaga agar gambar tidak keluar dari container */
+  position: relative; /* Agar kita bisa menambahkan lapisan di atas gambar */
+}
+
+.hero img {
+  width: 100%; /* Gambar mengikuti lebar container */
+  height: 100%; /* Gambar mengikuti tinggi container */
+  object-fit: cover; /* Gambar mengisi seluruh area container, dengan memotong bagian yang berlebih jika diperlukan */
+}
+
+.overlay {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero .hero-description {
+  z-index: 1;
+  color: white;
+  position: absolute;
+  left: 40px;
+  top: 30%;
+  right: 40%;
+  /* ANIMASI */
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 1.7s ease-out forwards;
+}
+
+/* Animasi untuk elemen masuk */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%); /* Mulai dari luar layar */
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0); /* Pindahkan ke posisi normal */
+    opacity: 1; /* Tampilkan elemen */
+  }
+}
+
+.hero .hero-description h1 {
+  font-size: 35px;
+  letter-spacing: 1px;
+}
+
+.hero .hero-description p {
+  margin-bottom: 19px;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+}
+
+.hero .hero-description a {
+  background-color: #809d3c;
+  color: white;
+  text-decoration: none;
+  letter-spacing: 0.4px;
+  /*display: inline-block;: Agar tombol bisa disesuaikan lebar 
+  dan tingginya, karena secara default, elemen <a> adalah inline.*/
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  padding: 0 10px;
+  border-radius: 40px;
+  font-size: 17px;
 }
 
 /* FOOTER */
 footer {
-  position: fixed;
+  /* position: fixed; */
   left: 0;
   bottom: 0;
   display: flex;
