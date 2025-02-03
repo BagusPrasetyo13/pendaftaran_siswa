@@ -62,14 +62,14 @@ body {
 }
 
 .wrapper-body {
-  padding: 110px 50px;
+  padding: 110px 30px;
   background-color: antiquewhite;
   height: 100%;
 }
 
 .hero {
   width: 100%; /* Pastikan container memenuhi lebar layar */
-  height: 70vh; /* Tinggi sesuai dengan tinggi layar */
+  height: 75vh; /* Tinggi sesuai dengan tinggi layar */
   border-radius: 30px;
   overflow: hidden; /* Untuk menjaga agar gambar tidak keluar dari container */
   position: relative; /* Agar kita bisa menambahkan lapisan di atas gambar */
@@ -141,6 +141,96 @@ body {
   padding: 0 10px;
   border-radius: 40px;
   font-size: 17px;
+}
+
+/* FEATURE */
+#feature {
+  position: relative;
+  display: flex;
+  justify-content: center; /* Supaya tetap sejajar */
+  margin-top: -50px; /* Menimpa hero section */
+}
+
+#feature .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #809d3c;
+  border-radius: 24px;
+  padding: 10px 40px;
+  width: 95%; /* Supaya lebih masuk ke dalam */
+  position: relative; /* Supaya tetap responsif */
+  z-index: 2; /* Agar di atas hero */
+}
+
+#feature .container .left,
+#feature .container .mid,
+#feature .container .right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#feature .container .feature-description {
+  margin-left: 30px;
+}
+
+#feature .container .feature-description h3 {
+  font-size: 18px;
+  color: whitesmoke;
+}
+
+#feature .container .feature-description p {
+  color: whitesmoke;
+  font-weight: 200;
+  font-size: 15px;
+}
+
+#feature .container .left img,
+#feature .container .mid img,
+#feature .container .right img {
+  height: 60px;
+}
+
+#about {
+  margin-top: 50px;
+}
+
+#about .container,
+.container-2 {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+#about .container .about-image,
+#about .container-2 .about-image {
+  display: flex;
+  background-color: black;
+  height: 300px;
+  width: 100%;
+  border-radius: 24px;
+  margin: 0 16px;
+  overflow: hidden;
+}
+
+#about .container .about-image img,
+#about .container-2 .about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: none;
+}
+
+#about .about-description {
+  padding: 0 24px;
+}
+
+#about .about-description p {
+  font-size: 18px;
+  font-weight: 200;
+  text-align: justify;
 }
 
 /* FOOTER */

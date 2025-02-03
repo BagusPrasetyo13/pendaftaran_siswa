@@ -9,7 +9,7 @@
     <ul class="navbar-items">
       <li><a href="">Home</a></li>
       <li><a href="">News</a></li>
-      <li><a href="">About</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="">Extra</a></li>
     </ul>
 
